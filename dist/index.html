@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container"></div>
+    <div class="header">
+        TODO APP
+    </div>
+    <div class="sidebar">
+            <ul>
+                <li>Home</li>
+                <li>Today</li>
+                <li>Week</li>
+                <li>Projects
+                    <ul class="projects">
+                        <li>new project</li>
+                        <li>added Projects</li>
+                        <li>last project</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="new-todo">+</div>
+    </div>
+    <dialog open id=modal>
+        <form method="dialog" class="form">
+            <label for="name">Title:</label>
+            <input type="text" id="name">
+
+            <label for="description">Description:</label>
+            <textarea  id="description" cols="30" rows="10"></textarea>
+
+            <label for="date">Date:</label>
+            <input type="date">
+            
+            <button type="submit">add</button>
+        </form>
+    </dialog>
+    <div class="content"></div>
     <script src="main.js"></script>
 </body>
 </html>
