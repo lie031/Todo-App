@@ -38,5 +38,15 @@ export default class Handlers{
 
             }
         });
+
+        domHandler.home.addEventListener('click',()=>{
+            domHandler.content.innerHTML = "";
+            domHandler.renderTodos();
+        });
+
+        domHandler.today.addEventListener('click',()=>{
+            domHandler.content.innerHTML = "";
+            domHandler.renderTodaytodos();
+        })
     }
 }
