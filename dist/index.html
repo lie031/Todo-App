@@ -3,43 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App</title>
+    <title>Project and Task Manager</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        TODO APP
+    <div class="container">
+        <header>
+            <h1>Project and Task Manager</h1>
+        </header>
+        <div class="main-content">
+            <aside class="sidebar">
+                <h2>Projects</h2>
+                <div class="create-section">
+                    <input type="text" class="projectName" placeholder="Project Name">
+                    <button class="createProjectBtn">Create Project</button>
+                </div>
+                <div class="projects">
+                    <!-- Projects will be displayed here -->
+                </div>
+            </aside>
+            <section class="task-viewer">
+                <h2>Tasks</h2>
+                <button class="openModalBtn">Create Task</button>
+                <div class="tasks">
+                    <!-- Tasks will be displayed here -->
+                </div>
+            </section>
+        </div>
     </div>
-    <div class="sidebar">
-            <ul>
-                <li id="home">Home</li>
-                <li id="today">Today</li>
-                <li id="week">Week</li>
-                <li>Projects
-                    <ul class="projects">
-                        <li>new project</li>
-                        <li>added Projects</li>
-                        <li>last project</li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="new-todo">+</div>
+
+    <!-- Modal for creating tasks -->
+    <div class="modal" id="taskModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create a New Task</h2>
+            <input type="text" class="taskTitle" placeholder="Task Title">
+            <input type="text" class="taskDescription" placeholder="Task Description">
+            <input type="date" class="taskDate">
+            <input type="text" class="taskPriority" placeholder="Task Priority">
+            <button class="createTaskBtn">Create Task</button>
+        </div>
     </div>
-    <dialog id=modal>
-        <form method="dialog" class="form">
-            <label for="title">Title:</label>
-            <input type="text" id="title">
 
-            <label for="description">Description:</label>
-            <textarea  id="description" cols="30" rows="10"></textarea>
-
-            <label for="date">Date:</label>
-            <input type="date" id="date">
-            
-            <button type="submit" id="addBtn">add</button>
-        </form>
-    </dialog>
-    <div class="content"></div>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>

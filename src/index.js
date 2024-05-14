@@ -1,10 +1,7 @@
-import Handlers from "./modules/handlers";
-import Dom from "./modules/dom";
+import { projectHandler } from './modules/DomStuff';
+import Storage from './modules/Storage';
 
-const dom = new Dom();
+Storage.loadProjects();
+projectHandler();
 
-Handlers.modalAddBtn();
-Handlers.openModal();
-Handlers.clickEvent();
-dom.renderTodos();
 
