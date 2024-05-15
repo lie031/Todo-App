@@ -76,6 +76,14 @@ button:hover {
     background-color: #218838;
 }
 
+.project{
+    display: flex;
+}
+.project-name{
+    
+    flex: 1;
+}
+
 .projects, .tasks {
     flex: 1;
     overflow-y: auto;
@@ -87,7 +95,9 @@ button:hover {
     margin: 5px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
-    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .project:hover, .task:hover {
@@ -99,14 +109,33 @@ button:hover {
     color: #fff;
 }
 
-.task {
+.task .task-info {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 }
 
-.task-title {
-    font-weight: bold;
+.task .task-date {
+    font-size: 0.85em;
+    color: #666;
+}
+
+button.deleteBtn {
+    background-color: transparent;
+    border: none;
+    color: #dc3545;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    flex: 0;
+}
+
+button.deleteBtn:hover {
+    color: #c82333;
+}
+
+button.deleteBtn i {
+    pointer-events: none;
 }
 
 /* Modal Styles */
@@ -149,4 +178,8 @@ button:hover {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.title{
+    font-size: 40px;
 }
